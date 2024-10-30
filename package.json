@@ -1,0 +1,33 @@
+{
+	"name": "node-optional-chaining-mixed-modules",
+	"version": "1.0.0",
+	"description": "A practical guide to using optional chaining in Node.js applications that mix CommonJS and ES6 modules. This repository provides examples, best practices, and tips to effectively integrate optional chaining in projects with mixed module syntax, making your code safer and more readable.",
+	"main": "src/index.js",
+	"scripts": {
+		"clean": "rm -rf dist && mkdir dist",
+		"build-server": "babel -d ./dist ./app -s",
+		"build": "npm run clean && npm run build-server",
+		"dev": "nodemon --exec npx babel-node app/src/index.js",
+		"check": "nodemon app/src/index.js",
+		"run-dist": "node dist/src/index.js"
+	},
+	"keywords": [
+		"nodejs",
+		"optional chaining",
+		"commonjs",
+		"es6",
+		"javascript"
+	],
+	"author": "Your Name",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.21.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.25.9",
+		"@babel/core": "^7.26.0",
+		"@babel/node": "^7.26.0",
+		"@babel/preset-env": "^7.26.0",
+		"nodemon": "^3.1.7"
+	}
+}
